@@ -78,6 +78,7 @@ public class DemoWebShopTests {
                 .post("http://demowebshop.tricentis.com/subscribenewsletter");
         response.then().statusCode(200);
         response.then().body("Success", equalTo(true));
-        response.then().body("Result", equalTo("Thank you for signing up! A verification email has been sent. We appreciate your interest."));
+        response.then().body("Result", equalTo("Thank you for signing up! A verification" +
+                " email has been sent. We appreciate your interest."));
     }
 }
